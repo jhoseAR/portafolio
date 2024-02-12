@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import header from '../components/Header.astro'
+import Badge from '../components/Badge.astro'
+import Linkedin from '../components/icons/linkedin.astro'
+import Socialpill from '../components/icons/Socialpill.astro'
+import GitHub from '../components/icons/GitHub.astro'
+import Gmail from '../components/icons/Gmail.astro'
+import Experiencia from '../components/experiencia.astro'
+import Maletin from '../components/icons/expe.astro'
+import Proy from '../components/icons/proy.astro'
+import Projects from '../components/proyects.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="px-4">
+		<section class=" w-full lg:w-[740px] mx-auto py-10">
+			<img class=" rounded-full  h-60" src="/public/lil_peep.jpg" alt="">
+			<h1 class=" p-3 text-white text-xl lg:text-3xl font-bold justify-center flex-row gap-x-4 pb-2 lg:pb-6">hola soy josé alarcón <Badge> </Badge></h1>
+		<h2 class=" text-wrap max-w-[500px] text-ml lg:text-xl opacity-80">0 años de experiencia desarrollador web y payaso de su casa me ioeguioureigueriogrueoigreuiogreurgeoiiso de payaso trm</h2>
+		<nav class="flex gap-x-2  mt-2 flex-wrap">
+			<Socialpill href="">
+				<Linkedin class="size-4 lg:size-6 w-6 h-6"/> Linkendin
+			</Socialpill>
+			<Socialpill href="">
+				<GitHub class="size-4 lg:size-6 w-6 h-6"/> GitHub
+			</Socialpill>
+			<Socialpill  href="">
+				<Gmail class="size-4 lg:size-6 w-6 h-6"/> ja516321@Gmail.com
+			</Socialpill>
+		</nav>
+		</section>
+		<section id="experiencia" class=" w-full lg:w-[740px] mx-auto px-2">
+			<h2 class=" text-2xl font-semibold mb-8 flex gap-x-2">
+				<Maletin class=" size-8" />Experiencia laboral</h2>
+			<Experiencia />
+		</section>
+		<section id="proyectos" class=" w-full lg:w-[740px] mx-auto px-2">
+			<h2 class=" text-2xl font-semibold mb-8 flex gap-x-2">
+				<Proy class=" size-8" />proyectos</h2>
+				<Projects />
+		</section>
+	</main>
+	<Footer />
+</Layout>
+

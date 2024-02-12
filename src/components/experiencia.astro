@@ -1,0 +1,37 @@
+---
+import Itenexpe from "../components/Itenexpe.astro"
+
+ const EXPERIENCIA =[
+    {
+        date:'febrary 2022',
+        title:'febrary 2022',
+        descripcion:'febrary 2022',
+        link:'#'
+    },
+    {
+        date:'febrary 2022',
+        title:'febrary 2022',
+        descripcion:'febrary 2022',
+        link:'#'
+    },
+    {
+        date:'febrary 2022',
+        title:'febrary 2022',
+        descripcion:'febrary 2022',
+        link:'#'
+    }
+    
+ ]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCIA.map(experiencia =>(
+        <li class="mb-10 ms-4">
+            <Itenexpe {...experiencia} />
+        </li>
+        ))
+    }                  
+</ol>
+

@@ -1,0 +1,43 @@
+---
+import tailwind from "./icons/tailwind.astro"
+
+const TAGS ={
+    TAILWIND:{
+        name:"tailwind",
+        class:" bg-black text-white",
+        icon :tailwind,
+    }
+}
+
+
+
+const PROJECTS = [{
+    title:'jhgwdhjwg',
+    descripcion:'djdggdkd',
+    link:'#',
+    github:'#',
+    image:'/public/pro.webp',
+    tags:[TAGS.TAILWIND]
+}
+]
+---
+{
+    PROJECTS.map(proyect =>(
+        <article>
+            <h3 class="text-2xl font-semibold mb-2">{proyect.title}</h3>
+            <p class="text-lg mb-4 text-pretty">{proyect.descripcion}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {proyect.tags.map(tag =>(
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-ms ${tag.class}py-1 px-2 `}>
+                        <tag.icon  class=" size-6 pt-2" /> 
+                        {tag.name}
+                        </span>
+                        </li>
+                ))}
+                </ul>
+            <img class=" pt-4 mb-20  w-96 lg:w-5/6 h-70 lg:h-96 rounded shadow-2xl shadow-white/10s"
+            src={proyect.image} alt={`Captura del proyecto ${proyect.image}`}>
+            </article>
+    ))
+}
